@@ -1,0 +1,22 @@
+/* universal style  */
+* {
+     padding: 0;
+     box-sizing: border-box;
+     margin: 0;
+}
+.container {
+     width: 1320px;
+     margin: 0 auto;
+}
+
+/* root color  */
+:root {
+     --btn-bg: #1d4ed8;
+     --text-title: #000102;
+     --short-title: #2563eb;
+     --card-bg: #0d1b2a;
+     --border-stoke: #e5e7eb;
+     --paragraph: #575757;
+     --list-item: #333333;
+     --team-title: #0d1b2a;
+}

@@ -8,6 +8,16 @@
      width: 1320px;
      margin: 0 auto;
 }
+body {
+     font-family: 'Inter', sans-serif;
+}
+
+.section-title {
+     font-size: 56px;
+     font-weight: 700;
+     text-align: center;
+     color: var(--text-title);
+}
 
 /* root color  */
 :root {
@@ -19,4 +29,239 @@
      --paragraph: #575757;
      --list-item: #333333;
      --team-title: #0d1b2a;
+     --white: #ffffff;
+}
+
+/* header style  */
+.header {
+     background: var(--white);
+     padding: 20px 0;
+}
+
+.header .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.navbar .logo img {
+     width: 100%;
+     height: auto;
+}
+
+.navbar .nav-menu {
+     display: flex;
+     gap: 10px;
+}
+
+.navbar .nav-menu li {
+     list-style: none;
+     color: var(--paragraph);
+}
+
+.navbar .nav-menu li a {
+     color: var(--paragraph);
+     text-decoration: none;
+     padding: 8px 15px;
+     cursor: pointer;
+     transition: 0.3s ease;
+     font-size: 16px;
+     font-weight: 400;
+}
+
+.navbar .nav-menu li a:hover {
+     background: var(--btn-bg);
+     border-radius: 8px;
+     color: var(--white);
+}
+
+.navbar .menu-btn button,
+.hero-content button {
+     padding: 12px 20px;
+     background: var(--btn-bg);
+     color: var(--white);
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     font-size: 16px;
+     font-weight: 600;
+}
+
+/* hero section style  */
+
+.hero-section {
+     min-height: 75vh;
+     background:
+          linear-gradient(to right, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0) 70%),
+          url(../img/banner.jpg);
+     color: var(--white);
+}
+
+.hero-container {
+     min-height: 75vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     padding: 20px 0;
+}
+
+.hero-section .hero-content {
+     display: flex;
+     flex-direction: column;
+}
+
+.hero-section .hero-content h1 {
+     font-size: 80px;
+     font-weight: 700;
+}
+
+.hero-section .hero-content p {
+     font-size: 22px;
+     font-weight: 400;
+     line-height: 1.3em;
+     width: 800px;
+     align-self: center;
+}
+
+.hero-section .hero-content button {
+     margin-top: 250px;
+     align-self: center;
+     font-size: 24px;
+     padding: 15px 30px;
+}
+
+/* meet our team style  */
+.speakers {
+     margin: 80px 0;
+}
+.speaker-content .speaker-grid {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 32px;
+     margin-top: 50px;
+}
+
+.speaker-grid .speaker-card img {
+     width: 100%;
+     height: auto;
+     border-radius: 12px 12px 0 0;
+}
+
+.speaker-grid .speaker-card .speaker-content {
+     padding: 24px;
+     display: flex;
+     gap: 8px;
+     flex-direction: column;
+}
+
+.speaker-content .speaker-category {
+     font-size: 12px;
+     font-weight: 600;
+     color: var(--short-title);
+}
+
+.speaker-content .speaker-name {
+     font-size: 20px;
+     font-weight: 700;
+     line-height: 1.3em;
+     color: var(--card-bg);
+}
+
+.speaker-content .speaker-role {
+     font-size: 14px;
+     line-height: 1.4em;
+     color: var(--paragraph);
+}
+
+/* pricing section  */
+.pricing {
+     margin: 80px 0;
+}
+
+.pricing .pricing-content {
+     display: flex;
+     flex-direction: column;
+     gap: 12px;
+}
+
+.pricing .pricing-content p {
+     font-size: 16px;
+     line-height: 1.4em;
+     color: var(--paragraph);
+     align-self: center;
+}
+
+.pricing-content .pricing-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 24px;
+     padding: 40px 80px;
+}
+
+.pricing-content .pricing-grid .pricing-card {
+     padding: 32px;
+     border-radius: 12px;
+     background-color: #f8f9fb;
+}
+
+.pricing-content .pricing-grid .pricing-card:hover {
+     background: var(--card-bg);
+}
+
+.pricing-grid .pricing-card:hover .variation {
+     color: var(--btn-bg);
+}
+.pricing-grid .pricing-card:hover .price {
+     color: var(--white);
+}
+.pricing-grid .pricing-card:hover li {
+     color: var(--white);
+}
+.pricing-grid .pricing-card:hover button {
+     color: var(--white);
+     background: var(--btn-bg);
+     border-color: var(--btn-bg);
+}
+
+.pricing-grid .pricing-card .variation {
+     font-size: 14px;
+     font-weight: 600;
+     text-transform: uppercase;
+     color: #888888;
+}
+
+.pricing-grid .pricing-card .price {
+     font-size: 44px;
+     font-weight: 700;
+     color: var(--card-bg);
+}
+.pricing-grid .pricing-card .type {
+     font-size: 13px;
+     font-weight: 400;
+     color: #888888;
+     margin-bottom: 30px;
+}
+
+.pricing-card .list-items li {
+     list-style-position: inside;
+     margin-bottom: 10px;
+     font-size: 14px;
+     line-height: 1.2em;
+     color: #333333;
+}
+
+.pricing-card .list-items li::marker {
+     color: var(--btn-bg);
+}
+
+.pricing-card button {
+     width: 100%;
+     font-size: 14px;
+     padding: 10px 0;
+     line-height: 1.3em;
+     border-radius: 10px;
+     color: var(--btn-bg);
+     border: 1px solid var(--btn-bg);
+     margin-top: 10px;
 }

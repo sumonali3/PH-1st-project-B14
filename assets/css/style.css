@@ -5,15 +5,16 @@
      margin: 0;
 }
 .container {
-     width: 1320px;
-     margin: 0 auto;
+     max-width: 1320px;
+     width: 100%;
+     margin: auto;
 }
 body {
      font-family: 'Inter', sans-serif;
 }
 
 .section-title {
-     font-size: 56px;
+     font-size: clamp(1.5625rem, 1.0089rem + 2.4603vw, 3.5rem);
      font-weight: 700;
      text-align: center;
      color: var(--text-title);
@@ -94,6 +95,9 @@ body {
      background:
           linear-gradient(to right, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0) 70%),
           url(../img/banner.jpg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
      color: var(--white);
 }
 
@@ -103,6 +107,7 @@ body {
      justify-content: center;
      align-items: center;
      text-align: center;
+     gap: 20px;
      padding: 20px 0;
 }
 
@@ -112,22 +117,22 @@ body {
 }
 
 .hero-section .hero-content h1 {
-     font-size: 80px;
+     font-size: clamp(2.1875rem, 1.3839rem + 3.5714vw, 5rem);
      font-weight: 700;
 }
 
 .hero-section .hero-content p {
-     font-size: 22px;
+     font-size: clamp(1rem, 0.8929rem + 0.4762vw, 1.375rem);
      font-weight: 400;
      line-height: 1.3em;
-     width: 800px;
+     width: 60%;
      align-self: center;
 }
 
 .hero-section .hero-content button {
      margin-top: 250px;
      align-self: center;
-     font-size: 24px;
+     font-size: clamp(1.125rem, 1.0179rem + 0.4762vw, 1.5rem);
      padding: 15px 30px;
 }
 
@@ -162,7 +167,7 @@ body {
 }
 
 .speaker-content .speaker-name {
-     font-size: 20px;
+     font-size: clamp(1.125rem, 1.0893rem + 0.1587vw, 1.25rem);
      font-weight: 700;
      line-height: 1.3em;
      color: var(--card-bg);
@@ -232,7 +237,7 @@ body {
 }
 
 .pricing-grid .pricing-card .price {
-     font-size: 44px;
+     font-size: clamp(1.75rem, 1.4643rem + 1.2698vw, 2.75rem);
      font-weight: 700;
      color: var(--card-bg);
 }
@@ -264,4 +269,84 @@ body {
      color: var(--btn-bg);
      border: 1px solid var(--btn-bg);
      margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+     .container {
+          width: 100%;
+          padding: 0 20px;
+     }
+
+     .header .navbar {
+          flex-direction: column;
+          gap: 10px;
+          align-items: center;
+          justify-content: center;
+     }
+     .hero-section,
+     .hero-container {
+          min-height: 55vh;
+     }
+
+     .hero-section .hero-content button {
+          margin-top: 10px;
+     }
+
+     .hero-section .hero-content p {
+          width: 100%;
+     }
+
+     .speakers,
+     .pricing {
+          margin: 50px 0;
+     }
+
+     .speaker-content .speaker-grid {
+          grid-template-columns: repeat(2, 1fr);
+          margin-top: 30px;
+     }
+
+     .speaker-grid .speaker-card .speaker-content {
+          padding: 15px;
+     }
+
+     .pricing-content .pricing-grid {
+          grid-template-columns: repeat(2, 1fr);
+          padding: 20px 40px;
+     }
+
+     .pricing-content .pricing-grid .pricing-card {
+          padding: 20px;
+     }
+}
+@media (max-width: 768px) {
+     .navbar .menu-btn button,
+     .hero-content button {
+          padding: 7px 15px;
+     }
+
+     .navbar .nav-menu li a {
+          padding: 8px 10px;
+     }
+
+     .hero-section,
+     .hero-container {
+          min-height: 40vh;
+          padding: 10px;
+     }
+
+     .speakers,
+     .pricing {
+          margin: 40px 0;
+     }
+
+     .speaker-content .speaker-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+     }
+
+     .pricing-content .pricing-grid {
+          grid-template-columns: 1fr;
+          padding: 0;
+     }
 }
